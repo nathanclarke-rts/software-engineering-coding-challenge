@@ -1,6 +1,6 @@
 # FleetCare (mock)
 
-A stand-in for the third-party maintenance system Keystone's equipment shop uses. **Treat it as a vendor API you can't change.**
+A stand-in for the third-party maintenance system Lumen Builders' equipment shop uses. **Treat it as a vendor API you can't change.**
 
 ```bash
 npm run mock              # from repo root, chaos ON (realistic)

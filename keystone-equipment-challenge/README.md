@@ -1,10 +1,8 @@
-# RTS Labs Engineering Challenge: Keystone Builders Equipment Scheduling
+# RTS Labs Engineering Challenge: Lumen Builders Equipment Scheduling
 
 Welcome, and thanks for spending time on this.
 
-You're joining an RTS Labs engagement as the consultant engineer. Our client, **Keystone Builders**, is a fictional mid-size general contractor. They have a scheduling problem that's costing them real money. A previous contractor started building a replacement for their spreadsheet and then left. You're picking it up.
-
-**Time box: 3–4 hours.** Please don't go over. When time's up, stop and write down what you'd do next. That writing counts as much as code.
+You're joining an RTS Labs engagement as the consultant engineer. Our client, **Lumen Builders**, is a fictional mid-size general contractor. They have a scheduling problem that's costing them real money. A previous contractor started building a replacement for their spreadsheet and then left. You're picking it up.
 
 **This challenge is used for every level, from early-career to principal.** Nobody is expected to finish everything. Pick the depth that shows your best thinking. A small, correct, well-reasoned submission beats a large, shaky one.
 
@@ -14,7 +12,7 @@ You're joining an RTS Labs engagement as the consultant engineer. Our client, **
 
 ## 1. The client
 
-Keystone runs **12 active jobsites** across Virginia, North Carolina and Tennessee. They share a fleet of about **60 pieces of heavy equipment**: mobile and tower cranes, excavators, dozers, lifts and telehandlers. Some of it requires a certified operator.
+Lumen Builders runs **12 active jobsites** across Virginia, North Carolina and Tennessee. They share a fleet of about **60 pieces of heavy equipment**: mobile and tower cranes, excavators, dozers, lifts and telehandlers. Some of it requires a certified operator.
 
 Today everything is scheduled in a shared Excel workbook. Here is what we heard in discovery.
 
@@ -40,7 +38,7 @@ Today everything is scheduled in a shared Excel workbook. Here is what we heard 
 
 ### Users and roles
 
-Demo users live in `data/users.json`. Keystone hasn't fully defined permissions yet. This is what we know:
+Demo users live in `data/users.json`. Lumen Builders hasn't fully defined permissions yet. This is what we know:
 
 | Role | What we know |
 |---|---|
@@ -109,18 +107,18 @@ curl -s -H "Authorization: Bearer $TOKEN" \
 
 ## 4. The challenge
 
-### Part 0: Understand and plan (required, about 30 min)
+### Part 0: Understand and plan (required)
 
 - Read the code, schema and data. Run the app.
 - Write a plan in `docs/plan/01-<slug>.md`. The template and the `plan-first` skill will help.
-- Make a list of **problems you find in the inherited code and data**, ranked by what matters most to Keystone. You don't have to fix them all. Show us you see them and can prioritise.
+- Make a list of **problems you find in the inherited code and data**, ranked by what matters most to Lumen Builders. You don't have to fix them all. Show us you see them and can prioritise.
 
 ### Part 1: Trustworthy availability (required)
 
 Make **"what equipment is free for these dates?"** something a superintendent can trust.
 
 - The `GET /api/equipment/availability` results should be **correct**, taking into account existing bookings and FleetCare maintenance windows.
-- The endpoint should behave sensibly **when FleetCare is slow, down or rate-limiting**. Decide what "sensibly" means for Keystone and explain it.
+- The endpoint should behave sensibly **when FleetCare is slow, down or rate-limiting**. Decide what "sensibly" means for Lumen Builders and explain it.
 - Users should see only what their role and sites allow.
 - The UI should work for Marcus: on a phone, and **accessible**. It needs clear loading, empty and error states.
 - Include tests that give you, and us, confidence.
@@ -138,7 +136,7 @@ Add **`POST /api/reservations`** (and whatever else you need) so a user can book
 ### Part 3: Deep dive (pick at least one if you're senior or above; optional for everyone else)
 
 - **A. Prove the concurrency guarantee.** Write a test that fires many simultaneous reservation requests and shows exactly one wins. Explain the mechanism you rely on, and how it would change on Postgres or with multiple API instances.
-- **B. Production readiness.** Add observability that would let you run this for Keystone: structured logs, request correlation, metrics on FleetCare latency and errors, health and readiness checks, and an audit trail of who booked or changed what. Tell us what you'd alert on and why.
+- **B. Production readiness.** Add observability that would let you run this for Lumen Builders: structured logs, request correlation, metrics on FleetCare latency and errors, health and readiness checks, and an audit trail of who booked or changed what. Tell us what you'd alert on and why.
 - **C. Data and scale.** Redesign the schema properly and migrate the messy spreadsheet data into it (dates, time zones, asset tags, certifications). Then write a short design for about 10× scale: 120 sites, 600 assets, and possibly multiple client companies on one deployment. Cover indexes, caching and the FleetCare rate limit.
 - **D. AI stretch goal: foreman text requests.** Foremen text requests like *"need a 90 ton crane at riverside tues thru thurs next week"*. Build a feature that turns a message into a **draft** reservation for a human to confirm. `data/foreman_messages.jsonl` has 24 labelled examples. Use it to build an **evaluation harness** and report your scores. Consider prompt injection, permissions, personal data sent to the model, cost and latency, and how you'd monitor quality over time. (A stubbed or mocked model is acceptable if you don't have an API key. We care most about the design and the eval.)
 
@@ -167,7 +165,7 @@ Please **don't commit secrets** or local database files.
 
 We're not counting features. Across your code, docs, commits and AI log, we look at:
 
-- **Understanding the problem**: did you solve Keystone's problem, not just the ticket?
+- **Understanding the problem**: did you solve Lumen Builders' problem, not just the ticket?
 - **Technical judgement**: what you prioritised, what you deliberately didn't do, and why.
 - **Architecture**: separation of concerns, abstractions, data modelling, and data flow from browser to database.
 - **Correctness and resilience**: edge cases, failure handling, concurrency.

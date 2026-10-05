@@ -1,4 +1,4 @@
--- Keystone Builders equipment scheduling
+-- Lumen Builders equipment scheduling
 -- Initial schema, created by the previous contractor as a direct copy of the
 -- spreadsheet tabs so the office could "get off Excel quickly".
 -- SQLite dialect. Loaded by scripts/seed.mjs.

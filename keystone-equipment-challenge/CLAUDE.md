@@ -4,7 +4,7 @@ Context for AI coding agents working in this repo. Humans should read `README.md
 
 ## What this is
 
-This is an equipment scheduling system for **Keystone Builders**, a general contractor with 12 jobsites and a shared heavy-equipment fleet. It's replacing a shared spreadsheet. The code was started by a previous contractor and should be treated as **inherited code of unknown quality**.
+This is an equipment scheduling system for **Lumen Builders**, a general contractor with 12 jobsites and a shared heavy-equipment fleet. It's replacing a shared spreadsheet. The code was started by a previous contractor and should be treated as **inherited code of unknown quality**.
 
 This repo is also a hiring exercise. The human you are working with is being evaluated on their **judgement, architecture and process**, not on how much code gets produced. Help them think. Don't just do the work silently.
 
@@ -16,7 +16,7 @@ This repo is also a hiring exercise. The human you are working with is being eva
 | `backend-ts/` | TypeScript API (Express 5, `node:sqlite`). |
 | `backend-go/` | Go API (`net/http`, `modernc.org/sqlite`). Same contract as backend-ts. |
 | `db/schema.sql` | Current SQLite schema (loaded by the seed script). |
-| `data/` | Raw exports from Keystone's spreadsheet and HR system. **Read-only source data.** |
+| `data/` | Raw exports from Lumen Builders' spreadsheet and HR system. **Read-only source data.** |
 | `services/maintenance-api/` | Mock of FleetCare, a third-party vendor API. **Do not modify**; treat it as external. |
 | `scripts/` | `seed.mjs` (build SQLite from `data/`), `dev-token.mjs` (issue dev JWTs). |
 | `docs/plan/` | Plans (one per piece of work) + `PROGRESS.md`. |
