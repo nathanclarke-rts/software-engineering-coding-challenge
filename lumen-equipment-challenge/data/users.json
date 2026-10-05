@@ -1,10 +1,10 @@
 {
-  "_comment": "Demo users. Roles and site assignments come from Keystone's HR system nightly. '*' means all sites.",
+  "_comment": "Demo users. Roles and site assignments come from Lumen Builders' HR system nightly. '*' means all sites.",
   "users": [
     {
       "user_id": "u-ops-01",
       "name": "Dana Whitaker",
-      "email": "dana.whitaker@keystone-builders.example",
+      "email": "dana.whitaker@lumen-builders.example",
       "role": "ops_director",
       "site_ids": [
         "*"
@@ -13,7 +13,7 @@
     {
       "user_id": "u-sup-01",
       "name": "Marcus Bell",
-      "email": "marcus.bell@keystone-builders.example",
+      "email": "marcus.bell@lumen-builders.example",
       "role": "superintendent",
       "site_ids": [
         "S01",
@@ -24,7 +24,7 @@
     {
       "user_id": "u-sup-02",
       "name": "Tanya Ruiz",
-      "email": "tanya.ruiz@keystone-builders.example",
+      "email": "tanya.ruiz@lumen-builders.example",
       "role": "superintendent",
       "site_ids": [
         "S03",
@@ -35,7 +35,7 @@
     {
       "user_id": "u-sup-03",
       "name": "Dale Whitfield",
-      "email": "dale.whitfield@keystone-builders.example",
+      "email": "dale.whitfield@lumen-builders.example",
       "role": "superintendent",
       "site_ids": [
         "S11",
@@ -45,7 +45,7 @@
     {
       "user_id": "u-for-01",
       "name": "Hector Lopez",
-      "email": "hector.lopez@keystone-builders.example",
+      "email": "hector.lopez@lumen-builders.example",
       "role": "foreman",
       "site_ids": [
         "S01"
@@ -54,7 +54,7 @@
     {
       "user_id": "u-for-02",
       "name": "Aisha Grant",
-      "email": "aisha.grant@keystone-builders.example",
+      "email": "aisha.grant@lumen-builders.example",
       "role": "foreman",
       "site_ids": [
         "S09",
@@ -64,7 +64,7 @@
     {
       "user_id": "u-saf-01",
       "name": "Priya Nair",
-      "email": "priya.nair@keystone-builders.example",
+      "email": "priya.nair@lumen-builders.example",
       "role": "safety_manager",
       "site_ids": [
         "*"

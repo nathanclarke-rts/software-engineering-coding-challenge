@@ -33,13 +33,13 @@ A short description or diagram of a request travelling from the browser to the d
 ## Testing
 What's covered, what isn't, and how to run it.
 
-## Questions I would have asked Keystone
+## Questions I would have asked Lumen Builders
 And the assumption you made in the meantime.
 
 ## Known issues / limitations
 
 ## What I'd do next
-If this were going to production for Keystone in 3 months, what comes next and why? (Think SSO, deployment, monitoring, scale, data migration, rollout.)
+If this were going to production for Lumen Builders in 3 months, what comes next and why? (Think SSO, deployment, monitoring, scale, data migration, rollout.)
 
 ## How I used AI
 Where it helped, where it got things wrong, and how you caught it.
